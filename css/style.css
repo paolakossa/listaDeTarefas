@@ -1,0 +1,80 @@
+*{
+	font-family: 'Poppins', sans-serif;
+}
+
+body{
+	
+	background: url("../img/todo-lists-ga7d6b83b9_1280.jpg");
+	background-repeat: no-repeat;
+	width: 100vw;
+	height: 100vh;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.container{
+	border: 2px solid #16213E;
+	padding: 30px 40px;
+	width: 35%;
+}
+
+.new-task-container{
+	background-color: #16213E;
+	padding: 30px 20px;
+	border-radius: 5px;
+	box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+	display: flex;
+	align-items: center;
+
+}
+
+.new-task-container input{
+	flex: 3;
+	font-size: 1rem;
+	border: 2px solid #B1B2FF;
+	padding: 12px;
+	font-weight: 500;
+}
+
+.new-task-container input:focus{
+	outline: none;
+	border-color: #8758FF;
+}
+
+.new-task-button{
+	flex:1;
+	border-radius: 5px;
+	font-weight: 500;
+	height: 100%;
+	font-size: 1rem;
+	border:none;
+	background-color: #B1B2FF;
+	padding: 12px;
+	margin-left: 12px;
+	cursor: pointer;
+
+}
+
+.tasks-container{
+	background-color: #16213E;
+	padding: 30px 20px;
+	margin-top: 60px;
+	border-radius: 10px;
+	box-shadow: 0 15px 30px rgba(0,0,0,0.3); 
+	width: 92%;
+	color: #B1B2FF;
+
+}
+
+/* Utilidades*/
+
+.error{
+	border: 2px solid #CC3636 !important;
+}
+
+.error::placeholder {
+	color:  #CC3636;
+}
