@@ -78,3 +78,19 @@ body{
 .error::placeholder {
 	color:  #CC3636;
 }
+
+.task-item{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 6px;
+	margin-top: 6px;
+}
+
+.task-item i{
+	background-color: #B1B2FF;
+	color: #16213E;
+	padding: 12px;
+	border-radius: 5px;
+	
+}
