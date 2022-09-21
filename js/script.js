@@ -17,13 +17,13 @@ const handleAddTask = () => {
 	const taskContent = document.createElement('p');
 	taskContent.innerText = inputElement.value; 
 
-	taskContent.addEventListener('click', () => handleClick()); 
+	taskContent.addEventListener('click', () => handleClick(taskContent)); 
 
 	const deleteItem = document.createElement('i');
 	deleteItem.classList.add('fa-regular');
 	deleteItem.classList.add('fa-trash-can');
 
-	deleteItem.addEventListener('click', () => handleDeleteClick()); 
+	deleteItem.addEventListener('click', () => handleDeleteClick(taskItemContainer, taskContent)); 
 
 	taskItemContainer.appendChild(taskContent);
 	taskItemContainer.appendChild(deleteItem);
@@ -32,6 +32,30 @@ const handleAddTask = () => {
 
 	inputElement.value = '';
 };
+
+const handleClick = (taskContent) => {
+	const tasks = tasksContainer.childNodes; 
+
+
+	for ( const task of tasks) {
+		const currentTaskIsBeingClick = task.firstChild.isSameNode(taskContent);
+		if(currentTaskIsBeingClick) {
+			task.firstChild.classList.toggle('completed');
+		}
+	}
+};
+
+const handleDeleteClick = (taskItemContainer, taskContent) => {
+	const tasks = tasksContainer.childNodes; 
+
+	for ( const task of tasks) {
+		const currentTaskIsBeingClick = task.firstChild.isSameNode(taskContent);
+		if(currentTaskIsBeingClick) {
+			taskItemContainer.remove();
+		}
+	}
+};
+
 
 const handleInputChange = () => {
 	const inputIsValid = validateInput(); 
@@ -44,3 +68,4 @@ const handleInputChange = () => {
 addTaskButton.addEventListener('click', () => handleAddTask()); 
 
 inputElement.addEventListener('change', () => handleInputChange()); 
+

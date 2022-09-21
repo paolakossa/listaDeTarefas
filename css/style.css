@@ -67,6 +67,7 @@ body{
 	width: 92%;
 	color: #B1B2FF;
 
+
 }
 
 /* Utilidades*/
@@ -93,4 +94,12 @@ body{
 	padding: 12px;
 	border-radius: 5px;
 	
+}
+
+.task-item i:hover{
+	cursor: pointer;
+}
+
+.completed{
+	text-decoration: line-through;
 }
